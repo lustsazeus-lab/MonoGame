@@ -303,7 +303,7 @@ namespace Microsoft.Xna.Framework.Graphics
             _defaultStateObject = true;
         }
 
-        private SamplerState(SamplerState cloneSource)
+        public SamplerState(SamplerState cloneSource)
         {
             Name = cloneSource.Name;
             _filter = cloneSource._filter;
@@ -318,7 +318,7 @@ namespace Microsoft.Xna.Framework.Graphics
             _filterMode = cloneSource._filterMode;
         }
 
-        internal SamplerState Clone()
+        public SamplerState Clone()
         {
             return new SamplerState(this);
         }
